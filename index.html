@@ -255,30 +255,63 @@
                     </p>
              </div>        
         <!-- slider / carousel     -->
+            <div class="w-full mx-auto">
 
-            <div class="carousel w-full" style="background-image: url(images/banner.png);">
-                <div id="slide1" class="carousel-item relative w-full h-auto">
-                        
-                        <div class="flex justify-center py-24">
-                        <div class="">
-                            <img class="rounded-full w-1/2" src="images/man.jpg" />
-                         
-                            <h3 class="text-white">
-                                Awlad Hossain
-                            </h3>
-                         </div>  
+                <div id="default-carousel" class="relative rounded-lg overflow-hidden shadow-lg" data-carousel="static">
+                    <!-- Carousel wrapper -->
+                    <div class="relative h-80 md:h-96" data-carousel-inner>
+                        <!-- Item 1 -->
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <img src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
+                                class="object-cover w-full h-full" alt="Slide 1">
+                            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-xl font-semibold text-white md:text-2xl dark:text-gray-800">First Slide
+                                <p class="text-white text-center">
+                                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur.
+                                </p>
+                            </div>
+
+
+                            
                         </div>
-
-                        <!-- <img src="images/slider-1.jpg" class="w-full"/> -->
-                        <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                        <a href="#slide3" class="btn btn-circle">❮</a>
-                        <a href="#slide2" class="btn btn-circle">❯</a>
+                        <!-- Item 2 -->
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <img src="https://flowbite.com/docs/images/carousel/carousel-2.svg"
+                                class="object-cover w-full h-full" alt="Slide 2">
+                        </div>
+                        <!-- Item 3 -->
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <img src="https://flowbite.com/docs/images/carousel/carousel-3.svg"
+                                class="object-cover w-full h-full" alt="Slide 3">
                         </div>
                     </div>
-                    
-              </div>
-            <!-- slider / carousel     -->
+                   
+                    <!-- Slider controls -->
+                    <button type="button"
+                        class="flex absolute top-1/2 left-3 z-40 items-center justify-center w-10 h-10 bg-gray-200/50 rounded-full hover:bg-gray-300 focus:outline-none transition"
+                        data-carousel-prev>
+                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                    </button>
+
+                    <button type="button"
+                        class="flex absolute top-1/2 right-3 z-40 items-center justify-center w-10 h-10 bg-gray-200/50 rounded-full hover:bg-gray-300 focus:outline-none transition"
+                        data-carousel-next>
+                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </div>
+
+              
+                <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+
+            </div>
+         <!-- slider / carousel     -->
         </section>
+
         </main>
         <footer></footer>
 </body>
