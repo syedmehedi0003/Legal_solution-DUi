@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind Carousel</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            sans: ["Roboto", "sans-serif"],
+          },
+        },
+      };
+    </script>
+  </head>
+  <style>
+    .indicator {
+      width: 30px;
+      height: 3px;
+      background: white;
+      opacity: 0.5;
+      transition: opacity 0.3s;
+    }
+    .indicator.active {
+      opacity: 1;
+    }
+  </style>
+
+  <body class="bg-black">
+    <div id="carousel" class="relative overflow-hidden">
+      <!-- Indicators -->
+      <div
+        class="absolute bottom-4 left-0 right-0 z-10 flex justify-center gap-2"
+      >
+        <button class="indicator active"></button>
+        <button class="indicator"></button>
+        <button class="indicator"></button>
+      </div>
+
+      <!-- Slides Wrapper -->
+      <div
+        id="slides"
+        class="flex transition-transform duration-700 ease-in-out"
+      >
+        <!-- Slide 1 -->
+        <div class="w-full flex-shrink-0 relative">
+          <img
+            src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(15).jpg"
+            class="w-full"
+          />
+          <div
+            class="absolute bottom-6 text-white text-center hidden md:block w-3/4 left-1/2 -translate-x-1/2 mb-5"
+          >
+            <h5 class="text-xl">First slide label</h5>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Accusantium, quidem? A odio dolores soluta, dolorum temporibus
+              explicabo accusamus dignissimos ullam adipisci architecto ea quasi
+              id porro provident vel fugiat quod amet at laborum corrupti odit
+              culpa ab. Sunt, consequatur placeat, accusamus eos quam maiores
+              laborum rerum quo numquam distinctio odit aliquam vitae hic optio!
+              Esse magnam, dignissimos eos similique doloribus quibusdam dolore
+              velit quam autem voluptate sed eveniet consequatur, accusamus
+              cumque? Porro omnis quas inventore id. Quod qui soluta facilis
+              perferendis tempora quam at incidunt, iusto distinctio tempore
+              obcaecati ullam nihil fuga deserunt laudantium sit ea, libero
+              aliquam eaque quibusdam!
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="w-full flex-shrink-0 relative">
+          <img
+            src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(22).jpg"
+            class="w-full"
+          />
+          <div
+            class="absolute bottom-6 text-white text-center w-3/4 left-1/2 -translate-x-1/2 mb-5 hidden md:block"
+          >
+            <h5 class="text-xl">Second slide label</h5>
+            <p>Some representative placeholder content.</p>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="w-full flex-shrink-0 relative">
+          <img
+            src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(23).jpg"
+            class="w-full"
+          />
+          <div
+            class="absolute bottom-6 text-white text-center w-3/4 left-1/2 -translate-x-1/2 mb-5 hidden md:block"
+          >
+            <h5 class="text-xl">Third slide label</h5>
+            <p>Some representative placeholder content.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Prev -->
+      <button
+        id="prev"
+        class="absolute left-0 top-0 h-full w-[15%] flex items-center justify-center text-white opacity-50 hover:opacity-90"
+      >
+        ❮
+      </button>
+
+      <!-- Next -->
+      <button
+        id="next"
+        class="absolute right-0 top-0 h-full w-[15%] flex items-center justify-center text-white opacity-50 hover:opacity-90"
+      >
+        ❯
+      </button>
+    </div>
+
+    <script>
+      const slides = document.getElementById("slides");
+      const indicators = document.querySelectorAll(".indicator");
+      const totalSlides = indicators.length;
+      let index = 0;
+      let interval;
+
+      function updateCarousel() {
+        slides.style.transform = `translateX(-${index * 100}%)`;
+        indicators.forEach((dot, i) =>
+          dot.classList.toggle("active", i === index)
+        );
+      }
+
+      function nextSlide() {
+        index = (index + 1) % totalSlides;
+        updateCarousel();
+      }
+
+      function prevSlide() {
+        index = (index - 1 + totalSlides) % totalSlides;
+        updateCarousel();
+      }
+
+      document.getElementById("next").onclick = nextSlide;
+      document.getElementById("prev").onclick = prevSlide;
+
+      indicators.forEach((dot, i) => {
+        dot.onclick = () => {
+          index = i;
+          updateCarousel();
+        };
+      });
+
+      // Auto slide (optional)
+      //  ===========================
+      //   function startAutoSlide() {
+      //     interval = setInterval(nextSlide, 4000);
+      //   }
+
+      //   function stopAutoSlide() {
+      //     clearInterval(interval);
+      //   }
+
+      //   startAutoSlide();
+    </script>
+  </body>
+</html>
