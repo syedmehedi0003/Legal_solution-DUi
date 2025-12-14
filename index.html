@@ -15,15 +15,17 @@
      <!-- https://cdnjs.com/libraries/font-awesome -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-     <!-- tailwind cdn  -->
-     <script src="https://cdn.tailwindcss.com"></script>
+    
 
     <!-- daisy ui cdn  -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <!-- tailwind cdn  -->
-     <script src="https://cdn.tailwindcss.com"></script>
+     <!-- https://v4.daisyui.com/docs/cdn/ -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
      <script>
         tailwind.config = {
         theme: {
@@ -31,6 +33,7 @@
             colors: {
                 clifford: '#da373d',
                 'primary-j-bg': '#B68C5A',
+                'dark1': '#111111',
             },
              fontFamily:{
                 'emGaramond': ['EB Garamond', 'serif'],
@@ -46,7 +49,6 @@
 </head>
 <body>
         
-
         <header class="w-10/12 mx-auto mt-5 font-poPpins">
             <!-- navbar  -->
             <div class="navbar bg-base-100">
@@ -99,7 +101,7 @@
                         There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.
                     </p>
                     <div class="font-poPpins">
-                        <input class="bg-white text-gray-500 rounded-lg input input-md pl-4" type="text" placeholder="Search your services" class="input" />
+                        <input class="bg-white text-gray-500 rounded-lg input input-mg  pl-4" type="text" placeholder="Search your services" class="input" />
 
                         <a class="btn text-white bg-primary-j-bg px-8 ml-2 mt-2 lg:mt-0">Search</a>
                     </div>
@@ -202,7 +204,7 @@
                  </div>
 
                  <!-- card  2-->
-                <div class=" bg-base-100 border-r border-l"">
+                <div class="bg-base-100 border-r border-l"">
 
                     <div class="flex px-10 pt-10 justify-center">
                         <img class="justify-center"
@@ -259,31 +261,58 @@
 
                 <div id="default-carousel" class="relative rounded-lg overflow-hidden shadow-lg" data-carousel="static">
                     <!-- Carousel wrapper -->
-                    <div class="relative h-80 md:h-96" data-carousel-inner>
+                    <div class="relative h-96" data-carousel-inner>
                         <!-- Item 1 -->
                         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <img src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
+                            <img src="images/slider-1.jpg"
                                 class="object-cover w-full h-full" alt="Slide 1">
-                            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-xl font-semibold text-white md:text-2xl dark:text-gray-800">First Slide
-                                <p class="text-white text-center">
-                                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur.
-                                </p>
-                            </div>
-
-
-                            
+                         
+                            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                <div class="text-center">
+                                    <img class="w-[20%] rounded-full ml-[40%]" src="images/man.jpg" alt="">
+                                    <h2 class="text-xl font-semibold text-white md:text-2xl  text-center">Awlad Hossain</h2>
+                                    <h5 class="text-white">UIX Designer</h5>
+                                    <p class="hidden lg:block text-white mt-2">
+                                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur.
+                                    </p>
+                                </div>
+                            </div>                            
                         </div>
+
                         <!-- Item 2 -->
                         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <img src="https://flowbite.com/docs/images/carousel/carousel-2.svg"
-                                class="object-cover w-full h-full" alt="Slide 2">
+                            <img src="images/slider-2.jpg"
+                                class="object-cover w-full h-full" alt="Slide 1">
+                         
+                            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                <div class="text-center">
+                                    <img class="w-[20%] rounded-full ml-[40%]" src="images/man.jpg" alt="">
+                                    <h2 class="text-xl font-semibold text-white md:text-2xl  text-center">Awlad Hossain</h2>
+                                    <h5 class="text-white">UIX Designer</h5>
+                                    <p class="hidden lg:block text-white mt-2">
+                                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur.
+                                    </p>
+                                </div>
+                            </div>                            
                         </div>
-                        <!-- Item 3 -->
+
+
+                         <!-- Item 3 -->
                         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <img src="https://flowbite.com/docs/images/carousel/carousel-3.svg"
-                                class="object-cover w-full h-full" alt="Slide 3">
+                            <img src="images/slider-3.jpg"
+                                class="object-cover w-full h-full" alt="Slide 1">
+                         
+                            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                <div class="text-center">
+                                    <img class="w-[20%] rounded-full ml-[40%]" src="images/man.jpg" alt="">
+                                    <h2 class="text-xl font-semibold text-white md:text-2xl  text-center">Awlad Hossain</h2>
+                                    <h5 class="text-white">UIX Designer</h5>
+                                    <p class="hidden lg:block text-white mt-2">
+                                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur.
+                                    </p>
+                                </div>
+                            </div>                            
                         </div>
-                    </div>
                    
                     <!-- Slider controls -->
                     <button type="button"
@@ -312,7 +341,226 @@
          <!-- slider / carousel     -->
         </section>
 
+        <!-- Frequently ask ques -->
+        <section class="mt-24">
+             <div class="my-12">
+                    <h2 class="text-4xl text-center text-gray-700 font-bold font-emGaramond">
+                        Frequently Asked Any Questions  
+                    </h2>
+                    <p class="text-center md:mx-auto text-gray-500 mt-4 md:w-9/12 font-poPpins">
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.
+                    </p>
+             </div>   
+
+
+             <div class="hero min-h-screen">
+                <div class="hero-content flex-col lg:flex-row-reverse overflow-hidden">
+                    <img
+                    src="images/faq.png"
+                    class="max-w-sm rounded-lg" />
+                    <!-- faq part  -->
+                    <div class="p-0 md:pr-8">
+                        <div class="collapse collapse-plus bg-base-200  mb-4">
+                        <input type="radio" name="my-accordion-3" checked="checked" />
+                        <div class="collapse-title font-semibold">1. Are application fee waivers available?</div>
+                        <div class="collapse-content text-sm">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, . </div>
+                        </div>
+                        <div class="collapse collapse-plus bg-base-200  mb-4">
+                        <input type="radio" name="my-accordion-3" />
+                        <div class="collapse-title font-semibold">2. I forgot my password. What should I do?</div>
+                        <div class="collapse-content text-sm">Click on "Forgot Password" on the login page and follow the instructions sent to your email.</div>
+                        </div>
+                        <div class="collapse collapse-plus bg-base-200">
+                        <input type="radio" name="my-accordion-3" />
+                        <div class="collapse-title font-semibold">3. How do I update my profile information?</div>
+                        <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact with us -->
+        <!-- for test  -->
+
+          <section class="mt-4">
+
+          
+          <div class="flex justify-around items-center">
+            
+            <div class="grid grid-clos-1 lg:grid-cols-2 gap-8">
+                <!-- cards  -->
+                <div class="bg-base-200  grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-2">
+                     <!-- card  2-->
+                  <div class=" border border-r-2 border-b-2  w-60 p-4">
+                    <div class="flex justify-center">
+                        <img
+                        src="images/location.png"
+                        alt="images"
+                         class="pt-5" />
+                    </div>
+                    <div class="items-center text-center">
+                        <h2 class="text-gray-700 font-bold text-xl font-emGaramond">Address</h2>
+                        <p class="font-poPpins text-gray-500 py-5">
+                            A108 Adam Street,<br>
+                            New York, NY 535022
+                        </p>
+                       
+                    </div>
+                 </div>
+
+
+                  <!-- card  2-->
+                  <div class="border border-b-2   w-60 p-4">
+                    <div class="flex justify-center">
+                        <img
+                        src="images/call.png"
+                        alt="images"
+                        class="pt-5"/>
+                    </div>
+                    <div class="items-center text-center">
+                        <h2 class="text-gray-700 font-bold text-xl font-emGaramond">Call Us</h2>
+                        <p class="font-poPpins text-gray-500 py-5">
+                            +88 01750 00 00 00 <br>
+                            +88 01750 00 00 00
+                        </p>
+                       
+                    </div>
+                 </div>
+
+                  <!-- card  2-->
+                  <div class="border border-r-2 w-60 p-4">
+                    <div class="flex justify-center">
+                        <img
+                        src="images/location.png"
+                        alt="images"
+                        class="pt-5" />
+                    </div>
+                    <div class="items-center text-center">
+                        <h2 class="text-gray-700 font-bold text-xl font-emGaramond">Email Us</h2>
+                        <p class="font-poPpins text-gray-500 py-5">
+                            info@gmail.com <br>
+                            info@gmail.com
+                        </p>
+                       
+                    </div>
+                 </div>
+
+                  <!-- card  2-->
+                  <div class="border-b w-60 p-4">
+                    <div class="flex justify-center">
+                        <img
+                        src="images/time.png"
+                        alt="images"
+                         class="pt-5" />
+                    </div>
+                    <div class="items-center text-center">
+                        <h2 class="text-gray-700 font-bold text-xl font-emGaramond">Working Hours</h2>
+                        <p class="font-poPpins text-gray-500 py-5">
+                            Mon-Fri: 9AM to 5PM <br>
+                            Sunday: 9AM to 1 PM
+                        </p>
+                       
+                    </div>
+                 </div>
+                        
+                            
+                      
+                </div>
+                
+
+                    <!-- form part  -->
+                    <div class="bg-base-100 w-full shrink-0 justify-center">
+                        <form class="">
+                            <div class="form-control mb-7">
+                            
+                            <input type="text" placeholder="Your Name" class="input bg-base-200" required />
+                            </div>
+                            <div class="form-control mb-7">
+                            
+                            <input type="email" placeholder="Your Email" class="input bg-base-200 required" />
+                             </div>
+                            <div class="form-control mb-7">
+   
+                            <input type="text" placeholder="Subject" class="input bg-base-200" required />
+                            </div>
+
+                           <div class="form-control">
+                            <textarea type="text"  placeholder="Your Message" id="" class="input bg-base-200 h-28" required /></textarea>
+                            </div>
+
+                            <div class="form-control mt-8">
+                            <button class="btn bg-primary-j-bg text-white hover:text-red-500">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+
+              </div>
+          </div>
+
+        </section>    
+         
         </main>
-        <footer></footer>
+        <footer class="bg-dark1 mt-24">
+            <div class="w-10/12 mx-auto font-poPpins">
+                <div class="grid grid-cols-1 md:grid-cols-4 py-8 lg:py-20  gap-10">
+                    <div>
+                        <img class="w-1/2" src="images/logo.png" alt="">
+                        <p class="text-gray-400 pt-6 font-poPpins">
+                            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-white font-bold text-2xl font-emGaramond">Usefull Link</h3>
+                        
+                        <nav class="pt-6">
+                            <ul class="text-gray-400 font-poPpins">
+                                <li class="pb-2">Homes</li>
+                                <li class="pb-2">About Us</li>
+                                <li class="pb-2">Cases</li>
+                                <li class="pb-2">Blog</li>
+                                <li class="pb-2">Contact Us</li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="">
+                        <h3 class="text-white font-bold text-2xl font-emGaramond">Contact Now</h3>
+                        
+                        <p class="pt-6 text-gray-400 font-poPpins">
+                            555 4th 5t NW, Washington <br>
+                            DC 20530, United States
+                        </p>
+
+                        <p class="pt-4 text-gray-400 font-poPpins">
+                            +88 01750 000 000 <br>
+                            +88 01750 000 000
+                        </p>
+
+                        <p class="pt-4 text-gray-400 font-poPpins">
+                            info@gmail.com <br>
+                            info@gmail.com
+                        </p>
+                    </div>
+
+
+                    <div>
+                        <h3 class="text-white font-bold text-2xl font-emGaramond">Subscribe</h3>
+                        
+                        <p class="pt-6 text-gray-400 font-poPpins">
+                            Subscribe for our latest & Articles. We Won’t Give You Spam Mails
+                        </p>
+
+                        <div class="font-poPpins mt-5">
+                        <input class="bg-white text-gray-500 rounded-lg input w-44" type="email" placeholder="Email Address" class="input" />
+
+                        
+                        <a class="btn text-white bg-primary-j-bg mt-12 -ml-6 overflow-hidden"><i class="fa-regular fa-paper-plane py-4"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
 </body>
 </html>
